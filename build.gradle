@@ -39,6 +39,7 @@ dependencies {
     implementation("io.ktor:ktor-client-serialization:$ktor_version")
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
@@ -47,3 +48,9 @@ test {
 kotlin {
     jvmToolchain(17)
 }
+
+//tasks {
+//    // Configure logging level
+//    logging.captureStandardOutput(LogLevel.INFO)
+//    logging.captureStandardError(LogLevel.ERROR)
+//}

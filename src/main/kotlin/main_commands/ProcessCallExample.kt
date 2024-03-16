@@ -11,21 +11,22 @@ import kotlinx.coroutines.async
 
 
 class ProcessCallExample : CliktCommand(name = "shell", help = "shell to execute commands") {
-    val command by option(help = "command to execute").default("")
+    val command by option(help = "command to execute").default("echo")
     @OptIn(ExperimentalCoroutinesApi::class, DelicateCoroutinesApi::class)
     override fun run() {
         shell {
             val upper = stringLambda {
                 it.uppercase() to ""
             }
-            val streamLambda = streamLambda { inputStream, outputStream, outputStream2 ->
-                echo("i am the- ---" + inputStream.bufferedReader().readText())
-            }
+//            val streamLambda = streamLambda { inputStream, outputStream, outputStream2 ->
+//                echo("i am the- ---" + inputStream.bufferedReader().readText())
+//            }
 
             "echo starting streaming lambda pipeline now..."()
             pipeline {
-                "cat gradlew.bat".process() pipe upper pipe streamLambda
+                "echo hello world".process() pipe upper //pipe streamLambda
             }
+            command()
         }
     }
 }
