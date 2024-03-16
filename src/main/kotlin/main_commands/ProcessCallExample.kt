@@ -22,6 +22,7 @@ class ProcessCallExample : CliktCommand(name = "shell", help = "shell to execute
                 echo("i am the- ---" + inputStream.bufferedReader().readText())
             }
 
+            "echo starting streaming lambda pipeline now..."()
             pipeline {
                 "cat gradlew.bat".process() pipe upper pipe streamLambda
             }
