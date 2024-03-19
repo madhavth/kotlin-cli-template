@@ -40,6 +40,12 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // write excel
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.5'
+    // XSSFWorkbook depend on poi
+
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.5'
 }
 
 test {
