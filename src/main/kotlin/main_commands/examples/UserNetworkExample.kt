@@ -1,4 +1,4 @@
-package org.example.main_commands
+package org.example.main_commands.examples
 
 import com.github.ajalt.clikt.core.CliktCommand
 import eu.jrie.jetbrains.kotlinshell.shell.shell

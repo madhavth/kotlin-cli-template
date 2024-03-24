@@ -1,4 +1,4 @@
-package org.example.main_commands
+package org.example.main_commands.examples
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.default
@@ -6,8 +6,6 @@ import com.github.ajalt.clikt.parameters.options.option
 import eu.jrie.jetbrains.kotlinshell.shell.shell
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
 
 
 class ProcessCallExample : CliktCommand(name = "shell", help = "shell to execute commands") {
