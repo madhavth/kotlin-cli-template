@@ -2,6 +2,7 @@ package org.example
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import kotlinx.coroutines.sync.Semaphore
 import org.example.main_commands.examples.*
 
 fun main(list: Array<String>) {
@@ -19,7 +20,8 @@ class Main(name:String): CliktCommand(name=name) {
             UserNetworkCallExample(),
             ExcelExample(),
             SessionTesterExample(),
-            ProgressBarExample()
+            ProgressBarExample(),
+            SemaphoreExample()
         )
     }
 
